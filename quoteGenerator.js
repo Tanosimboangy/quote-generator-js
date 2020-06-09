@@ -13,7 +13,6 @@ let array3 = ["generate a new account.",
               "the cost of new phone is prohibitive.",
               "your method is updated."
                 ];
-
 let randomIndex1 = Math.floor(Math.random() * ( array1.length));
 let randomIndex2 = Math.floor(Math.random() * ( array2.length));
 let randomIndex3 = Math.floor(Math.random() * ( array3.length));
@@ -27,16 +26,21 @@ console.log(quote);
 
 var quoteNumber = prompt("How many times do you want to generate a random quotes, 1 to 5?");
   if (quoteNumber >= 1 && quoteNumber <= 5) {
-    console.log(quote);
-  }
+    for (let i = 0; i <= 5; i++) {
+      function generateQuote() {
+        let randomIndex1 = Math.floor(Math.random() * ( array1.length));
+        let randomIndex2 = Math.floor(Math.random() * ( array2.length));
+        let randomIndex3 = Math.floor(Math.random() * ( array3.length));
 
-for (let i = 0; i < quoteNumber; i++) {
-  if (quoteNumber >=1 && quoteNumber <=5) {
-    console.log(quote);
-  }  else {
-  console.log(quote !== quote);
-  }
+        let string1 = array1[randomIndex1];
+        let string2 = array2[randomIndex2];
+        let string3 = array3[randomIndex3];
 
+        let randomQuote = (" + firstQuote[randomNumber1] + "," + secondQuote[randomNumber2] + "," + thirdQuote[randomNumber3] + ");
+    }
+  }
+  console.log(randomQuote);
+}
 //3. we're going to use a loop somewhere, and it's going to last the number of times that the user entered in the prompt!
 //4. refactor our code into a function, and put the function call inside the loop
 //4.1 generate random numbers
