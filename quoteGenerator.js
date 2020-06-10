@@ -12,9 +12,9 @@ let array3 = ["generate a new account.",
               "jao got a new book.",
               "the cost of new phone is prohibitive.",
               "your method is updated."
-                ];
-
-const generateQuote = () => {
+              ];
+  
+const generateQuote1 = () => {
 	let randomIndex1 = Math.floor(Math.random() * array1.length);
 	let randomIndex2 = Math.floor(Math.random() * array2.length);
 	let randomIndex3 = Math.floor(Math.random() * array3.length);
@@ -22,22 +22,71 @@ const generateQuote = () => {
 	let string2 = array2[randomIndex2];
 	let string3 = array3[randomIndex3];
 	let quote = `${string1} ${string2} ${string3}`;
-	return quote;
+  return quote; 
 };
 
+let array4 = ['Treat me well,',
+  'I am not like that,',
+  'Please, forgive me',
+  'Why, I do not understand'
+];
+let array5 = ['natural, and so beautiful',
+  'perfect, do it again',
+  'blanck, but full',
+  'life style, like an ant',
+];
+let array6 = ['is it ?',
+  'I am pretty sure.',
+  'mutation.',
+  'that is enough.'
+];
 
-//1. use prompt to ask the user how many times we want to generate a random quote
+const generateQuote2 = () => {
+	let randomIndex4 = Math.floor(Math.random() * array4.length);
+	let randomIndex5 = Math.floor(Math.random() * array5.length);
+	let randomIndex6 = Math.floor(Math.random() * array6.length);
+	let string4 = array4[randomIndex4];
+	let string5 = array5[randomIndex5];
+	let string6 = array6[randomIndex6];
+	let quote1 = `${string4} ${string5} ${string6}`;
+  return quote1;
+};
+
 const numberOfQuotes = prompt('How many random quotes do you want to generate? (1 to 5)');
-//2. check if the prompt give us something between 1 and 5
-if (numberOfQuotes >= 1 && numberOfQuotes <= 5) {
-	//3. we're going to use a loop somewhere, and it's going to last the number of times that the user entered in the prompt!
-	for (let i = 0; i < numberOfQuotes; i++) {
-		//4. refactor our code into a function, and put the function call inside the loop
-		//4.1 generate random numbers
-		//4.2 show the generated quotes
-		let quote = generateQuote();
-		console.log(quote);
-	}
-} else {
-	console.error("Your number should less than or equal to 5 but greater than or equal to 1");
-}
+const typeOfQuotes = prompt('What kind of quotes do you want to generate? (1 or 2)');
+  if (numberOfQuotes >= 1 && numberOfQuotes <= 5) {
+      if (typeOfQuotes === 1) {
+        for (let i = 0; i < numberOfQuotes; i++) {
+          let quote = generateQuote1();
+          console.log(quote);
+        }
+      } else {
+        for (let i = 0; i < numberOfQuotes; i++) {
+          let quote1 = generateQuote2();
+          console.log(quote1);
+      }
+    }
+  } else {
+    console.error("Your number should be less than or equal to 5 but greater than or equal to 1");
+  }
+  const ifYouWantToStop = prompt('Do you want to continue it or no? (Yes or no)');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
